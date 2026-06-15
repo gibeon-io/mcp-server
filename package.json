@@ -1,0 +1,56 @@
+{
+  "name": "@gibeon/mcp-server",
+  "version": "0.2.1",
+  "description": "[DEPRECATED] Use the hosted MCP at https://api.gibeon.io/mcp. Legacy stdio MCP server for the Gibeon digital signage platform; authenticated with removed gib_live_ API keys and is no longer maintained.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "gibeon-mcp": "./bin/gibeon-mcp.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.3.5",
+    "typescript": "~5.9.3",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "digital-signage",
+    "gibeon",
+    "ai-tools",
+    "claude",
+    "cursor"
+  ],
+  "homepage": "https://www.gibeon.io/dev",
+  "license": "MIT"
+}
